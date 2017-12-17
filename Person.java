@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 
 public abstract class Person {
-	private ArrayList<Card> oneRoundCard;
-	public void setOneRoundCard(ArrayList<Card> cards){
+	private ArrayList<card> oneRoundCard;
+	public void setOneRoundCard(ArrayList<card> cards){
 		oneRoundCard=cards;
 	}
-	public ArrayList<Card> getOneRoundCard(){
+	public ArrayList<card> getOneRoundCard(){
 		return oneRoundCard;
 	}
 	public abstract boolean hit_me(Table table);
 	public int getTotalValue() {
 		int Ace_count = 0;
 		int total_value = 0;
-		for (Card c : oneRoundCard) {
+		for (card c : oneRoundCard) {
 			if (Ace_count == 0 && c.getRank() == 1) {
 				Ace_count = 1;
 				continue;
@@ -35,7 +35,7 @@ public abstract class Person {
 	}
 	public boolean hasAce() {
 		boolean hasAce= false;
-		for (Card c : oneRoundCard) {
+		for (card c : oneRoundCard) {
 			if (c.getRank() == 1) {
 				hasAce = true;
 			} 
@@ -43,7 +43,7 @@ public abstract class Person {
 		return hasAce;
 	}
 	public void printAllCard(){
-		for(Card c : oneRoundCard){
+		for(card c : oneRoundCard){
 			c.printCard();
 		}
 	}

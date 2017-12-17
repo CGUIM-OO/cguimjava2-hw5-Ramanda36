@@ -11,7 +11,7 @@ public class Dealer extends Person {
 			if (total_value >= 21)
 				return false;
 			else {
-				Player[] players = tbl.get_player();
+				player[] players = tbl.get_player();
 				int lose_count = 0;
 				int v_count = 0;
 				int[] betArray = tbl.get_palyers_bet();
